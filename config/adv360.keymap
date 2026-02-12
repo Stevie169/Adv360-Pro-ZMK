@@ -34,11 +34,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&none         &kp N1              &kp N2  &kp N3            &kp N4    &kp N5  &tog 1                                                     &mo 3          &kp N6   &kp N7    &kp N8             &kp N9   &kp N0               &none
-&kp CAPSLOCK  &kp X               &kp L   &kp D             &kp M     &kp Z   &none                                                      &none          &kp SQT  &kp W     &kp O              &kp U    &kp J                &none
-&kp TAB       &hm LEFT_CONTROL S  &kp R   &hm LEFT_SHIFT T  &hml 1 N  &kp B   &none      &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL   &none          &kp Y    &hml 1 C  &hm RIGHT_SHIFT A  &kp E    &hm RIGHT_CONTROL I  &kp LEFT_GUI
-&kp ESCAPE    &kp V               &kp K   &kp H             &kp P     &kp Q                         &kp HOME      &kp PG_UP                             &kp G    &kp F     &kp COMMA          &kp DOT  &kp FSLH             &none
-&none         &none               &none   &none             &none             &kp SPACE  &kp ENTER  &kp END       &kp PG_DN  &kp DELETE  &kp BACKSPACE           &none     &none              &none    &none                &none
+&none         &kp N1              &kp N2    &kp N3            &kp N4    &kp N5  &tog 1                                                     &mo 3          &kp N6   &kp N7    &kp N8             &kp N9   &kp N0               &none
+&kp CAPSLOCK  &kp X               &kp L     &kp D             &kp M     &kp Z   &none                                                      &none          &kp SQT  &kp W     &kp O              &kp U    &kp J                &none
+&kp TAB       &hm LEFT_CONTROL S  &hml 2 R  &hm LEFT_SHIFT T  &hml 1 N  &kp B   &none      &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL   &none          &kp Y    &hml 1 C  &hm RIGHT_SHIFT A  &kp E    &hm RIGHT_CONTROL I  &kp LEFT_GUI
+&kp ESCAPE    &kp V               &kp K     &kp H             &kp P     &kp Q                         &kp HOME      &kp PG_UP                             &kp G    &kp F     &kp COMMA          &kp DOT  &kp FSLH             &none
+&none         &none               &none     &none             &none             &kp SPACE  &kp ENTER  &kp END       &kp PG_DN  &kp DELETE  &kp BACKSPACE           &none     &none              &none    &none                &none
             >;
         };
 
