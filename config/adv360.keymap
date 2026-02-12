@@ -18,6 +18,14 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            #binding-cells = <2>;
+            tapping-term-ms = <130>;
+            bindings = <&mo>, <&kp>;
+        };
     };
 
     keymap {
@@ -26,22 +34,22 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&none         &kp N1              &kp N2  &kp N3            &kp N4  &kp N5  &tog 1                                                     &mo 3          &kp N6   &kp N7  &kp N8             &kp N9   &kp N0               &none
-&kp CAPSLOCK  &kp X               &kp L   &kp D             &kp M   &kp Z   &none                                                      &none          &kp SQT  &kp W   &kp O              &kp U    &kp J                &none
-&kp TAB       &hm LEFT_CONTROL S  &kp R   &hm LEFT_SHIFT T  &kp N   &kp B   &none      &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL   &none          &kp Y    &kp C   &hm RIGHT_SHIFT A  &kp E    &hm RIGHT_CONTROL I  &kp LEFT_GUI
-&kp ESCAPE    &kp V               &kp K   &kp H             &kp P   &kp Q                         &kp HOME      &kp PG_UP                             &kp G    &kp F   &kp COMMA          &kp DOT  &kp FSLH             &none
-&none         &none               &none   &none             &none           &kp SPACE  &kp ENTER  &kp END       &kp PG_DN  &kp DELETE  &kp BACKSPACE           &none   &none              &none    &none                &none
+&none         &kp N1              &kp N2  &kp N3            &kp N4    &kp N5  &tog 1                                                     &mo 3          &kp N6    &kp N7  &kp N8             &kp N9   &kp N0               &none
+&kp CAPSLOCK  &kp X               &kp L   &kp D             &kp M     &kp Z   &none                                                      &none          &kp SQT   &kp W   &kp O              &kp U    &kp J                &none
+&kp TAB       &hm LEFT_CONTROL S  &kp R   &hm LEFT_SHIFT T  &hml 1 N  &kp B   &none      &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL   &none          &hml 1 C  &kp C   &hm RIGHT_SHIFT A  &kp E    &hm RIGHT_CONTROL I  &kp LEFT_GUI
+&kp ESCAPE    &kp V               &kp K   &kp H             &kp P     &kp Q                         &kp HOME      &kp PG_UP                             &kp G     &kp F   &kp COMMA          &kp DOT  &kp FSLH             &none
+&none         &none               &none   &none             &none             &kp SPACE  &kp ENTER  &kp END       &kp PG_DN  &kp DELETE  &kp BACKSPACE            &none   &none              &none    &none                &none
             >;
         };
 
-        keypad {
+        programmingRight {
             display-name = "Kp";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3            &kp N4     &kp N5  &trans                                                   &mo 3      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E             &kp R      &kp T   &none                                                    &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
-&kp ESC    &kp A      &kp S     &hm LEFT_SHIFT D  &kp F      &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C             &kp V      &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT          &kp RIGHT          &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 2
+&none  &none        &none           &none           &none            &none      &trans                                                   &none      &none      &none                 &none                  &none           &none            &none
+&none  &kp DOLLAR   &kp PIPE        &kp UP_ARROW    &kp AMPERSAND    &kp STAR   &none                                                    &none      &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LEFT_BRACE  &kp RIGHT_BRACE  &none
+&none  &kp UNDER    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp TILDE  &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp EQUAL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS       &kp PLUS         &none
+&none  &kp PERCENT  &kp CARET       &kp AT          &kp HASH         &none                           &kp HOME      &kp PG_UP                        &none      &kp SEMI              &kp COLON              &kp BACKSLASH   &kp EXCL         &none
+&none  &none        &none           &none           &none                       &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0             &none                 &none                  &none           &none            &none
             >;
         };
 
