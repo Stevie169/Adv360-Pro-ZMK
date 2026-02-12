@@ -34,11 +34,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&none         &kp N1              &kp N2  &kp N3            &kp N4    &kp N5  &tog 1                                                     &mo 3          &kp N6    &kp N7  &kp N8             &kp N9   &kp N0               &none
-&kp CAPSLOCK  &kp X               &kp L   &kp D             &kp M     &kp Z   &none                                                      &none          &kp SQT   &kp W   &kp O              &kp U    &kp J                &none
-&kp TAB       &hm LEFT_CONTROL S  &kp R   &hm LEFT_SHIFT T  &hml 1 N  &kp B   &none      &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL   &none          &hml 1 C  &kp C   &hm RIGHT_SHIFT A  &kp E    &hm RIGHT_CONTROL I  &kp LEFT_GUI
-&kp ESCAPE    &kp V               &kp K   &kp H             &kp P     &kp Q                         &kp HOME      &kp PG_UP                             &kp G     &kp F   &kp COMMA          &kp DOT  &kp FSLH             &none
-&none         &none               &none   &none             &none             &kp SPACE  &kp ENTER  &kp END       &kp PG_DN  &kp DELETE  &kp BACKSPACE            &none   &none              &none    &none                &none
+&none         &kp N1              &kp N2  &kp N3            &kp N4    &kp N5  &tog 1                                                     &mo 3          &kp N6   &kp N7    &kp N8             &kp N9   &kp N0               &none
+&kp CAPSLOCK  &kp X               &kp L   &kp D             &kp M     &kp Z   &none                                                      &none          &kp SQT  &kp W     &kp O              &kp U    &kp J                &none
+&kp TAB       &hm LEFT_CONTROL S  &kp R   &hm LEFT_SHIFT T  &hml 1 N  &kp B   &none      &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL   &none          &kp Y    &hml 1 C  &hm RIGHT_SHIFT A  &kp E    &hm RIGHT_CONTROL I  &kp LEFT_GUI
+&kp ESCAPE    &kp V               &kp K   &kp H             &kp P     &kp Q                         &kp HOME      &kp PG_UP                             &kp G    &kp F     &kp COMMA          &kp DOT  &kp FSLH             &none
+&none         &none               &none   &none             &none             &kp SPACE  &kp ENTER  &kp END       &kp PG_DN  &kp DELETE  &kp BACKSPACE           &none     &none              &none    &none                &none
             >;
         };
 
@@ -53,14 +53,13 @@
             >;
         };
 
-        fn {
-            display-name = "Fn";
+        numbers {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans     &trans     &trans     &trans                                      &trans  &trans  &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &kp LC(A)  &kp LC(Z)  &kp LC(Y)  &trans                                      &trans  &trans  &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
+&trans  &trans  &trans  &kp LC(C)  &kp LC(V)  &kp LC(F)  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N7        &trans
+&trans  &trans  &trans  &kp LC(X)  &kp LC(S)  &trans                     &trans      &trans                  &trans  &kp N8        &kp N9        &trans        &trans        &trans
+&trans  &trans  &trans  &trans     &trans                &trans  &trans  &trans      &trans  &trans  &trans          &trans        &trans        &trans        &trans        &trans
             >;
         };
 
