@@ -23,8 +23,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HML";
             #binding-cells = <2>;
-            tapping-term-ms = <130>;
+            tapping-term-ms = <150>;
             bindings = <&mo>, <&kp>;
+
+            flavor = "tap-preferred";
         };
     };
 
