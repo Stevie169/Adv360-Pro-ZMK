@@ -92,9 +92,9 @@
         nav {
             bindings = <
 &trans  &trans  &trans              &trans         &trans               &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp HOME            &kp PG_UP      &kp END              &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LC(LEFT_ARROW)  &kp PAGE_DOWN  &kp LC(RIGHT_ARROW)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans              &trans         &trans               &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans              &trans         &trans               &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LC(LEFT_ARROW)  &kp PG_UP      &kp LC(RIGHT_ARROW)  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp HOME            &kp PAGE_DOWN  &kp END              &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans              &trans         &trans                       &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
