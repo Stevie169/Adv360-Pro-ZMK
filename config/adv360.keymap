@@ -15,7 +15,7 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <130>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
 
@@ -26,6 +26,16 @@
             tapping-term-ms = <150>;
             bindings = <&mo>, <&kp>;
 
+            flavor = "tap-preferred";
+        };
+
+        hmdelayed: hmdelayed {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMDELAYED";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
     };
@@ -50,11 +60,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&none         &none               &kp F2    &none             &none           &none  &none                                                        &mo 5          &none    &none            &none              &none     &none                &none
-&kp CAPSLOCK  &kp X               &kp L     &kp D             &kp M           &kp Z  &none                                                        &none          &kp SQT  &kp W            &kp O              &kp U     &kp J                &none
-&kp TAB       &hm LEFT_CONTROL S  &hml 2 R  &hm LEFT_SHIFT T  &hml 1 N        &kp B  &none      &none      &none      &none       &none           &none          &kp Y    &hml 1 C         &hm RIGHT_SHIFT A  &hml 4 E  &hm RIGHT_CONTROL I  &kp F11
-&kp LEFT_GUI  &hml 3 V            &kp K     &kp H             &hm LEFT_ALT P  &kp Q                        &none      &none                                      &kp G    &hm RIGHT_ALT F  &kp COMMA          &kp DOT   &hml 3 SLASH         &none
-&none         &none               &none     &none             &none                  &kp SPACE  &kp ENTER  &none      &kp DELETE  &kp LC(DELETE)  &kp BACKSPACE           &none            &none              &none     &none                &none
+&none         &kp F1                     &kp F2    &kp F3            &kp F4                 &kp F5  &none                                                        &mo 5          &kp F6   &kp F7                  &kp F8             &kp F10   &none                           &none
+&kp CAPSLOCK  &kp X                      &kp L     &kp D             &kp M                  &kp Z   &none                                                        &none          &kp SQT  &kp W                   &kp O              &kp U     &kp J                           &none
+&kp TAB       &kp S                      &hml 2 R  &hm LEFT_SHIFT T  &hml 1 N               &kp B   &none      &none      &none      &none       &none           &none          &kp Y    &hml 1 C                &hm RIGHT_SHIFT A  &hml 4 E  &kp I                           &kp F11
+&kp LEFT_GUI  &hmdelayed LEFT_CONTROL V  &kp K     &kp H             &hmdelayed LEFT_ALT P  &kp Q                         &none      &none                                      &kp G    &hmdelayed RIGHT_ALT F  &kp COMMA          &kp DOT   &hmdelayed RIGHT_CONTROL SLASH  &none
+&none         &none                      &none     &none             &none                          &kp SPACE  &kp ENTER  &none      &kp DELETE  &kp LC(DELETE)  &kp BACKSPACE           &none                   &none              &none     &none                           &none
             >;
         };
 
