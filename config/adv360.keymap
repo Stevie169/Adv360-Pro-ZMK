@@ -17,6 +17,8 @@
             tapping-term-ms = <150>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
+
+            require-prior-idle-ms = <70>;
         };
 
         hml: hml {
