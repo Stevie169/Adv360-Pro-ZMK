@@ -14,11 +14,9 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <130>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
-
-            require-prior-idle-ms = <100>;
         };
 
         hml: hml {
