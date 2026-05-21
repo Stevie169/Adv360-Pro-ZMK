@@ -10,13 +10,18 @@
         #include "macros.dtsi"
       #include "version.dtsi"
 
-        hm: homerow_mods {
+        hmShiftL: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <280>;
+            flavor = "balanced";
             bindings = <&kp>, <&kp>;
+
+            require-prior-idle-ms = <150>;
+            quick-tap-ms = <175>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 38 39 40 41 42 43 44 45 54 55 56 57 58 59 69 70 71 72 73 74 75 37 53 68>;
         };
 
         hml: hml {
@@ -37,6 +42,20 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
+        };
+
+        hmShiftR: hmShiftR {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMSHIFTR";
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+
+            require-prior-idle-ms = <150>;
+            quick-tap-ms = <175>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 36 46 47 48 49 50 51 52 60 61 62 63 64 65 66 67>;
         };
     };
 
@@ -60,11 +79,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&none           &kp F1                     &kp F2    &kp F3  &kp F4                 &kp F5  &none                                               &mo 5          &kp F6   &kp F7                  &kp F8     &kp F9    &kp F10                         &kp F11
-&kp CAPSLOCK    &kp X                      &kp L     &kp D   &kp M                  &kp Z   &none                                               &none          &kp SQT  &kp W                   &kp O      &kp U     &kp J                           &kp F12
-&kp LEFT_SHIFT  &kp S                      &hml 2 R  &kp T   &hml 1 N               &kp B   &none      &none      &none      &none  &none       &none          &kp Y    &hml 1 C                &kp A      &hml 4 E  &kp I                           &kp RIGHT_SHIFT
-&kp TAB         &hmdelayed LEFT_CONTROL V  &kp K     &kp H   &hmdelayed LEFT_ALT P  &kp Q                         &none      &none                             &kp G    &hmdelayed RIGHT_ALT F  &kp COMMA  &kp DOT   &hmdelayed RIGHT_CONTROL SLASH  &none
-&kp LEFT_WIN    &none                      &none     &none   &none                          &kp SPACE  &kp ENTER  &none      &none  &kp DELETE  &kp BACKSPACE           &none                   &none      &none     &none                           &none
+&none           &kp F1                     &kp F2    &kp F3                  &kp F4                 &kp F5  &none                                               &mo 5          &kp F6   &kp F7                  &kp F8                   &kp F9    &kp F10                         &kp F11
+&kp CAPSLOCK    &kp X                      &kp L     &kp D                   &kp M                  &kp Z   &none                                               &none          &kp SQT  &kp W                   &kp O                    &kp U     &kp J                           &kp F12
+&kp LEFT_SHIFT  &kp S                      &hml 2 R  &hmShiftL LEFT_SHIFT T  &hml 1 N               &kp B   &none      &none      &none      &none  &none       &none          &kp Y    &hml 1 C                &hmShiftR RIGHT_SHIFT A  &hml 4 E  &kp I                           &kp RIGHT_SHIFT
+&kp TAB         &hmdelayed LEFT_CONTROL V  &kp K     &kp H                   &hmdelayed LEFT_ALT P  &kp Q                         &none      &none                             &kp G    &hmdelayed RIGHT_ALT F  &kp COMMA                &kp DOT   &hmdelayed RIGHT_CONTROL SLASH  &none
+&kp LEFT_WIN    &none                      &none     &none                   &none                          &kp SPACE  &kp ENTER  &none      &none  &kp DELETE  &kp BACKSPACE           &none                   &none                    &none     &none                           &none
             >;
         };
 
