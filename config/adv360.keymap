@@ -77,10 +77,10 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&none         &kp F1                     &kp F2    &kp F3                  &kp F4                 &kp F5  &none                                               &mo 5          &kp F6   &kp F7                  &kp F8                   &kp F9    &kp F10                         &kp F11
-&kp CAPSLOCK  &kp X                      &kp L     &kp D                   &kp M                  &kp Z   &none                                               &none          &kp SQT  &kp W                   &kp O                    &kp U     &kp J                           &kp F12
-&kp TAB       &kp S                      &hml 2 R  &hmShiftL LEFT_SHIFT T  &hml 1 N               &kp B   &none      &none      &none      &none  &none       &none          &kp Y    &hml 1 C                &hmShiftR RIGHT_SHIFT A  &hml 4 E  &kp I                           &kp RIGHT_SHIFT
-&kp LEFT_WIN  &hmdelayed LEFT_CONTROL V  &kp K     &kp H                   &hmdelayed LEFT_ALT P  &kp Q                         &none      &none                             &kp G    &hmdelayed RIGHT_ALT F  &kp COMMA                &kp DOT   &hmdelayed RIGHT_CONTROL SLASH  &none
+&none         &kp F1                     &kp F2    &kp F3                  &kp F4                 &kp F5  &none                                               &mo 5          &kp F6   &kp F7                  &kp F8                   &kp F9    &kp F10                         &none
+&kp CAPSLOCK  &kp X                      &kp L     &kp D                   &kp M                  &kp Z   &none                                               &none          &kp SQT  &kp W                   &kp O                    &kp U     &kp J                           &kp F11
+&kp TAB       &kp S                      &hml 2 R  &hmShiftL LEFT_SHIFT T  &hml 1 N               &kp B   &none      &none      &none      &none  &none       &none          &kp Y    &hml 1 C                &hmShiftR RIGHT_SHIFT A  &hml 4 E  &kp I                           &kp F12
+&kp LEFT_WIN  &hmdelayed LEFT_CONTROL V  &kp K     &kp H                   &hmdelayed LEFT_ALT P  &kp Q                         &none      &none                             &kp G    &hmdelayed RIGHT_ALT F  &kp COMMA                &kp DOT   &hmdelayed RIGHT_CONTROL SLASH  &kp LEFT_SHIFT
 &none         &none                      &none     &none                   &none                          &kp SPACE  &kp ENTER  &none      &none  &kp DELETE  &kp BACKSPACE           &none                   &none                    &none     &none                           &none
             >;
         };
